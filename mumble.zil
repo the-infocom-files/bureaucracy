@@ -76,7 +76,7 @@
 		(<==? .CHAR <ASCII !\,>> 55)
 		(<==? .CHAR <ASCII !\;>> 56)>>
 		
-<LD-FILE "SS:<BUREAUCRACY>TEXT.FILE">
+<LD-FILE "SS:<BUREAUCRACY>text.file">
 
 <CONSTANT PROG-TABLE <TABLEIZE>>
 
