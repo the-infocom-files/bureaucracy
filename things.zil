@@ -2222,7 +2222,7 @@ takes your hand off with its sharp beak. You give up." CR>
 			     " couldn't
 move very fast, considering that it has only one wing; you would have been
 wrong. The damned thing has the speed, grace and tolerance of a shoal of
-pirhana fish, and after nearly losing your hand you side-step to safety. ">
+piranha fish, and after nearly losing your hand you side-step to safety. ">
 		       <COND (<IS? ,SHITMAIL ,SHITTY>
 			      <REMOVE ,SHITMAIL>
 			      <TELL "It then gobbles up the shreds of mail,">)
