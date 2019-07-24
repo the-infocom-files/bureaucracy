@@ -3585,7 +3585,7 @@ stay right there." CR>
 	<TABLE (LENGTH PATTERN (BYTE [REST WORD]))
 	       #BYTE 0 
 	 "is not permitted in this story without prior written consent, in triplicate, from Infocom, Inc"
-	 "is a violation of the Cambridge Convention, which prohibits it in humourous games"
+	 "is a violation of the Cambridge Convention, which prohibits it in humorous games"
 	 "cannot be allowed until your bank acknowledges your change-of-address form"
 	 "may not be attempted by anyone using a computer"
 	 "is not permitted until you obtain your physician's approval, and submit Form 691/05/Z, in person, to the Office of Forms in Vladivostok">>
