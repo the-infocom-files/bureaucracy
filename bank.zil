@@ -184,7 +184,7 @@
 		      <>)>)
 	      (T T)>>
 
-<DEFINE BANK-CHECK-DEAL (CONTEXT TBL "OPT" (CHAR <>) "AUX" X)
+<DEFINE BANK-CHECK-DEAL (CONTEXT TBL "OPT" (CHAR <>))
 	<COND (<==? .CONTEXT ,FORM-EXIT-FIELD>
 	       <COND (<EQUAL? <FIELD-DATA .TBL> %<ASCII !\Y> %<ASCII !\y>>
 		      <TELLER-DRUGS 1>
@@ -210,7 +210,7 @@
 	       <TELLER-DRUGS 0>)
 	      (T T)>>
 
-<DEFINE BANK-DRUGS (CONTEXT TBL "OPT" (CHAR <>) "AUX" X)
+<DEFINE BANK-DRUGS (CONTEXT TBL "OPT" (CHAR <>))
 	<COND (<==? .CONTEXT ,FORM-OK-TO-ENTER-FIELD?>
 	       <COND (<==? <TELLER-DRUGS> 1>
 		      T)
@@ -221,7 +221,7 @@
 	       <FF-NAME .CONTEXT .TBL .CHAR>)
 	      (T T)>>
 
-<DEFINE TO-BANK TB ("AUX" (BA <TELLER-BANK-HOURS>) H
+<DEFINE TO-BANK TB ("AUX" (BA <TELLER-BANK-HOURS>)
 		          T1 T2 T3 T4 (CLOSED <>))
 	 <COND (<T? ,END-GAME?>
 		<FROB-IS-CLOSED "bank">
@@ -539,7 +539,7 @@ littering, then pockets the money and leaves" ,PERIOD>)
 	 <TELLER-CURRENT-SCRIPT>>
 	T>
 
-<DEFINE MORE-TELLER-INTERACTION (SCR "AUX" FCN OBJ)
+<DEFINE MORE-TELLER-INTERACTION (SCR "AUX" OBJ)
 	<TELL "The teller at the window says, \"Do you wish to">
 	<TELL <ZGET .SCR ,TELLER-INTRO> CR>
 	<TELLER-STATE ,STATE-INIT>

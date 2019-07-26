@@ -576,7 +576,7 @@ the jack like a little rat from a tiny drainpipe." CR>
 	(GENERIC GEN-SAW-F)
 	(ACTION MPLUG-F)>
 
-<DEFINE MPLUG-F ("AUX" X)
+<DEFINE MPLUG-F ()
 	<COND (<AND <THIS-PRSO?>
 		    <VERB? UNPLUG>
 		    <OR <ZERO? ,PRSI> <PRSI? COMPUTER>>>
@@ -2662,7 +2662,7 @@ Rhinoceros, NJ 81818">
 
 <SETG NERD-HACKED-ABOOK? <>>
 
-<DEFINE PAGE-1-F ("AUX" N X BOT TOP)
+<DEFINE PAGE-1-F ("AUX" N)
 	 <COND (<THIS-PRSI?>
 		<>)
 	       (<HANDLE-PAGES?>
@@ -4260,7 +4260,7 @@ the balance.">)>)
 	       T)
 	      (ELSE <>)>> 
 
-<DEFINE CAB-ROOM-F ("OPTIONAL" (RARG <>) "AUX" (CS <CABSTATE>) VAL)
+<DEFINE CAB-ROOM-F ("OPTIONAL" (RARG <>) "AUX" (CS <CABSTATE>))
 	 <COND (<EQUAL? .RARG ,M-LOOK>
 		<TELL "You're in the back seat of a Getlost cab." CR>)
 	       (<==? .RARG ,M-BEG>

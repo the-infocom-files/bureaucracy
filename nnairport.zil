@@ -868,7 +868,7 @@ primary school?" CR>)
 		<>)>>
 
 ; "Room function"
-<DEFINE AIRLINE-DESK-F ADF ("OPT" (CONTEXT <>) "AUX" SOURCE DEST LEN DEST2 TT)
+<DEFINE AIRLINE-DESK-F ADF ("OPT" (CONTEXT <>))
   <COND (<==? .CONTEXT ,M-LOOK>
 	 <TELL "You're standing in ">
 	 <COND (<==? <CURRENT-DESK-ID> ,OMNIA-ID>
@@ -951,7 +951,7 @@ a departing Deep Thought Corporation repairman in ">
 		   "information, contact the Air   "
 		   "Zalagasa desk.                 ">>
 
-<DEFINE I-TERMINAL IT ("OPT" (CR T) "AUX" P)
+<DEFINE I-TERMINAL IT ("OPT" (CR T))
   <COND (<HERE? IN-TOWER> <>)
 	(<T? <JUST-HEARD?>>
 	 <JUST-HEARD? <>>
@@ -1666,7 +1666,7 @@ would accept one of our tickets. ">
 	       (T
 		<>)>>
 
-<DEFINE UP-PILLAR ("AUX" PH)
+<DEFINE UP-PILLAR ()
   <COND (<==? ,HERE ,PILLAR-A>
 	 <TELL "You shin further up the pillar. This is getting very dangerous" ,PCR>
 	 ,PILLAR-B)
@@ -1987,7 +1987,7 @@ be heard from the many other speakers in the terminal." CR>)>
 		,BWIRE)
 	       (T <>)>>
 
-<DEFINE MULTIWIRE? MW ("AUX" X)
+<DEFINE MULTIWIRE? MW ()
 	 <COND (<THIS-PRSI?>
 		<RETURN <> .MW>)
 	       (<AND <F? ,OBJECTS-GROUPED>

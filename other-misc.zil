@@ -468,7 +468,7 @@ Of course you know the sort of thing. It's exactly what has happened to you. But
 	      <IS? .OBJ ,TAKEABLE>> T)
 	(T <>)>>
 
-<DEFINE GROUND-F GROUND ("AUX" OBJ NXT SOMETHING)
+<DEFINE GROUND-F GROUND ("AUX" SOMETHING)
 	 <COND (<==? <GETP ,GROUND ,P?OBJ-NOUN> ,W?FLOOR>
 		<COND (<NOT <IS? ,HERE ,INDOORS>>
 		       <CANT-SEE-ANY ,GROUND>

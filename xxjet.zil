@@ -163,7 +163,7 @@ soon reach. The plane still doesn't come, because it never will.">
 		  <==? ,P-DIRECTION ,P?NORTH>>> T)
 	(T <>)>>
 
-<DEFINE AISLE-F AISLE (RARG "AUX" SEAT-MASK NR P1 P2 P3 P4 CT)
+<DEFINE AISLE-F AISLE (RARG "AUX" NR P1 P2 P3 P4 CT)
 	<COND (<==? .RARG ,M-LOOK>
 	       <TELL "You are standing in the aisle, at row "
 		     N ,CURRENT-ROW ". ">
@@ -423,7 +423,7 @@ for the moment, is next to her in seat B">)>
 
 "Wander the aisle. Front goes to Galley, back goes to area outside
  lavatory."
-<DEFINE CLEAN-UP-AISLE ("AUX" OBJ NO (ANY? <>))
+<DEFINE CLEAN-UP-AISLE ("AUX" (ANY? <>))
   <SET ANY? <POLICE-AREA ,AISLE <> ,GALLEY>>
   <COND (<T? .ANY?>
 	 <MAKE ,FLIGHT-ATTENDANT ,NODESC>
@@ -602,7 +602,7 @@ the front of the aircraft.\"" CR CR>)>>
   <SPLATTED-PERSON 0>
   <>>
 
-<DEFINE RECLINE-SEAT ("AUX" (ROW <GEN-ROW 3>) (SEATNUM <GEN-SEAT -1>) WHO
+<DEFINE RECLINE-SEAT ("AUX" (ROW <GEN-ROW 3>) (SEATNUM <GEN-SEAT -1>)
 		      (CT <SPLAT-COUNT>))
   <COND (<AND <==? .ROW <- <MEAL-ROW> 1>>
 	      <==? .SEATNUM <MEAL-SEAT>>
@@ -1304,8 +1304,7 @@ it encounters the emanations from behind " THEO ,PERIOD>)
 
 <DEFINE MATCH-SEAT-NAME MATCH (ADJ NAM ARG "AUX" ROW SNUM
 			       (NMVEC <ZREST ,SEAT-LETTER-NAMES 2>)
-			       (NMLEN <ZGET ,SEAT-LETTER-NAMES 0>)
-			       TAB)
+			       (NMLEN <ZGET ,SEAT-LETTER-NAMES 0>))
   <COND (<AND <F? .ADJ>
 	      <F? .NAM>>
 	 <>)
@@ -1734,7 +1733,7 @@ large litter"
 	       (T
 		<>)>>
 
-<DEFINE I-PHONES PHONES ("AUX" X Y)
+<DEFINE I-PHONES PHONES ("AUX" X)
 	 <SET X <TUNE-TIMER>>
 	 <COND (<G? <SET X <+ .X 1>> 3>
 		<SET X 0>
@@ -1854,7 +1853,7 @@ reassuring noises to the animals back there.\" She leaves." CR>
 	 <TELL "\"There's no need for that
 now. We've never had a crash in this " D ,PLANE ".\"" CR>)>>
 
-<DEFINE FLIGHT-ATTENDANT-F FAF ("OPT" (CONTEXT <>)"AUX" LOSERS-ROW)
+<DEFINE FLIGHT-ATTENDANT-F FAF ("OPT" (CONTEXT <>))
 	<COND (<VERB? FOLLOW>
 	       <TELL "The average " D ,PRSO " is a very sensitive, delicate
 creature, and might start to feel uncomfortable if a passenger started
@@ -2338,7 +2337,7 @@ Please return to your seats for your comfort and safety.\"" CR>
 
 <DEFINE RANDOM-OBJECT-F ROF ("OPT" (CONTEXT <>)
 			 "AUX" (WHICH <GETP ,RANDOM-OBJECT ,P?PSEUDO-TABLE>)
-			       STR (FOOD-HERE? <>) NS FOOD-PERSON FOOD-SEAT)
+			       (FOOD-HERE? <>) NS FOOD-PERSON FOOD-SEAT)
 	<COND (<==? .WHICH ,OTHER-FOOD-OBJECT>
 	       <COND
 		(<T? <MEAL-HERE?>>
