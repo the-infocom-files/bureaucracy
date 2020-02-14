@@ -20,13 +20,11 @@ The following sources provide further information on Bureaucracy:
 
 ## Version History
 
-Zarf's Obsessively Complete Infocom Catalog holds copies of the game files for every existing version of Bureaucracy listed in the Infocom Fact Sheet. It also holds the source files for version 160/880521.
-
-| Release | Serial | Story File                    | Zarf Sources           | Historical Sources |
-| -------:|:------:|:-----------------------------:|:----------------------:|:------------------:|
-|      86 | 870212 |  [bureaucracy-r86-s870212.z4] |                      - |                  - |
-|     116 | 870602 | [bureaucracy-r116-s870602.z4] |                      - |                  - |
-|     160 | 880521 | [bureaucracy-r160-s880521.z4] | [bureaucracy-r160.zip] |   [final revision] |
+| Release | Serial | Type | Story File                    | Obsessive Sources      | Historical Sources |
+| -------:|:------:|:----:|:-----------------------------:|:----------------------:|:------------------:|
+|      86 | 870212 |  PUB |  [bureaucracy-r86-s870212.z4] |                      - |                  - |
+|     116 | 870602 |  PUB | [bureaucracy-r116-s870602.z4] |                      - |                  - |
+|     160 | 880521 |  FIN | [bureaucracy-r160-s880521.z4] | [bureaucracy-r160.zip] |   [final revision] |
 
 [bureaucracy-r86-s870212.z4]: https://eblong.com/infocom/gamefiles/bureaucracy-r86-s870212.z4
 
