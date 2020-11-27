@@ -41,7 +41,7 @@
   <TUNE-MENTIONED? <>>
   .X>
 
-<DEFINE I-TUNE-TIMER ITT ("AUX" X Y)
+<DEFINE I-TUNE-TIMER ITT ("AUX" X)
 	 <SET X <TUNE-TIMER>>
 	 <COND (<G? <SET X <+ .X 1>> 10>
 		<SET X 0>
@@ -665,7 +665,7 @@ break, so someone else will have to take your order.\" She walks away." CR>
 	(T
 	 <TELL WORD .X>)>>
 
-<DEFINE REPEAT-ORDER R-O ("AUX" (CNT:FIX 0) A B C D E)
+<DEFINE REPEAT-ORDER R-O ("AUX" (CNT:FIX 0) A E)
 	 <COND (<==? <SET A <ZGET ,MEAL ,BURGER-TYPE>> ,W?SPECIAL>
 		<TELL "the special">
 		<RETURN T .R-O>)>

@@ -1039,7 +1039,7 @@
 		  <VOC "SOUTHEAST" <>> <VOC "SOUTHWEST" <>> >
 	 >>
 
-<DEFINE NOT-BUZZER-WORD? (WORD PTR "AUX" TBL X (BT ,BUZZTABLE))
+<DEFINE NOT-BUZZER-WORD? (WORD PTR "AUX" TBL (BT ,BUZZTABLE))
          <SET TBL <ZGET .BT 0>>
 	 <COND (<INTBL? .WORD <ZREST .TBL 2> <ZGET .TBL 0>>
 	        <TO-DO-THING-USE "ask about" "ASK CHARACTER ABOUT">
@@ -2055,7 +2055,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 		      <SETG P-PRSI <BUT-MERGE ,P-PRSI>>)>)>
 	T>
 
-<DEFINE BUT-MERGE (TBL "AUX" LEN:FIX BUTLEN:FIX (CNT:FIX 1)
+<DEFINE BUT-MERGE (TBL "AUX" LEN:FIX (CNT:FIX 1)
 		   (MATCHES:FIX 0) OBJ NTBL)
 	<SET LEN <ZGET .TBL ,P-MATCHLEN>>
 	<ZPUT ,P-MERGE ,P-MATCHLEN 0>
@@ -2076,7 +2076,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 	.NTBL>
 
 <DEFINE SNARFEM SNARFEM (PTR EPTR TBL
-			 "AUX" (BUT <>) LEN WV WRD NW (WAS-ALL? <>) ONEOBJ)
+			 "AUX" (BUT <>) WV WRD NW (WAS-ALL? <>) ONEOBJ)
    ;"Next SETG 6/21/84 for WHICH retrofix"
    <SETG P-AND <>>
    <COND (<EQUAL? ,P-GETFLAGS ,P-ALL>
@@ -2444,7 +2444,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 		        <RETURN>)>>>
 
 <DEFINE GLOBAL-CHECK CHECK (TBL
-			    "AUX" LEN:FIX RMG RMGL (CNT:FIX 0) OBJ OBITS FOO
+			    "AUX" LEN:FIX RMG RMGL (CNT:FIX 0) OBJ OBITS
 			    PO)
 	<SET LEN <ZGET .TBL ,P-MATCHLEN>>
 	<SET OBITS ,P-SLOCBITS>
@@ -2490,7 +2490,7 @@ OOPS-INBUF, leaving the appropriate pointers in AGAIN-LEXV."
 				    WAIT-FOR READ>
 			     <DO-SL ,ROOMS 1 1>)>)>)>>
 
-<DEFINE DO-SL (OBJ BIT1 BIT2 "AUX" BITS)
+<DEFINE DO-SL (OBJ BIT1 BIT2)
 	<COND (<BTST ,P-SLOCBITS <+ .BIT1 .BIT2>>
 	       <SEARCH-LIST .OBJ ,P-TABLE ,P-SRCALL>)
 	      (T
@@ -2965,7 +2965,7 @@ byte after the length that's initially 0."
 	(FLAGS NOARTICLE)
 	(ACTION NOT-HERE-OBJECT-F)>
 
-<DEFINE NOT-HERE-OBJECT-F NOT-HERE ("AUX" TBL (PRSO? T) OBJ ; (X <>) VAL)
+<DEFINE NOT-HERE-OBJECT-F NOT-HERE ("AUX" TBL (PRSO? T) OBJ ; (X <>))
 	 <COND (<AND <PRSO? NOT-HERE-OBJECT>
 		     <PRSI? NOT-HERE-OBJECT>>
 		<TELL "Those things aren't here." CR>

@@ -862,7 +862,7 @@ sharpening their numerous knives on you, as an example to others, then
 (rather mercifully, in our opinion) shoot you.">
   <JIGS-UP>>
 
-<DEFINE PARANOID-IS-ANGRY ("AUX" WRD T1 T2 T1L T2L AL J K THEQ
+<DEFINE PARANOID-IS-ANGRY ("AUX" T1 T2 T1L T2L AL J K THEQ
 			   (QTB ,P-Q) (ATB ,P-A))
 	<TELL CR
 	      "The paranoid householder stares first at you, then at the
@@ -1046,7 +1046,7 @@ a few simple questions. Right.\"" CR CR>
 	     <AND <QUEUED? I-SPY> <L? <SPY-TIMER> 4>>>
 	 <SPY-CONFUSED "I thought I was supposed to say that">)>>
 
-<DEFINE CHECK-FOR-PARANOID CFP ("OPT" (BAD? <>) "AUX" CNT)
+<DEFINE CHECK-FOR-PARANOID CFP ("OPT" (BAD? <>))
 	<COND (<T? .BAD?> T)
 	      (<F? <PICK-MESSAGE 0>>
 	       <COND (,COMP-WORD-FATAL?

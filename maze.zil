@@ -25,7 +25,7 @@
 <SETG MAZE-STEPS-TAKEN 0>
 <SETG MAZE-LOSING? <>>
 
-<DEFINE MAZE-ROOM-F ("OPT" (CONTEXT <>) "AUX" DIF)
+<DEFINE MAZE-ROOM-F ("OPT" (CONTEXT <>))
   <COND (<==? .CONTEXT ,M-LOOK>
 	 <TELL "You are in a switchgear room, with exits in all directions.
 Inscribed on the wall is the number " N ,CURRENT-MAZE-ROOM ,PERIOD>)
@@ -139,7 +139,7 @@ information, contact the Commission for Helping Out Maze Players." CR>
 	       <TELL "Which way do you want to go?" CR>
 	       <>)>>
 
-<DEFINE INNER-ROOM-F ("OPT" (CONTEXT <>) "AUX" VEC)
+<DEFINE INNER-ROOM-F ("OPT" (CONTEXT <>))
   <COND (<==? .CONTEXT ,M-ENTERING>
 	 <COND (<N==? ,ODD-GATE-SOLVED? ,IN-CLEARING>
 		<MOVE ,ODD-GATE ,INNER-ROOM>
@@ -394,9 +394,8 @@ strength of ten." CR>
 <MSETG NUM-COMPLEX-POSITIONS <+ ,NUM-PERSECUTION-WINDOWS-BY-2 1>>
 
 <DEFINE IN-COMPLEX-ROOM-F ("OPT" (CONTEXT <>)
-			   "AUX" (POS ,COMPLEX-POS) OBJS
-				 (LOOK? ,COMPLEX-LOOKED?)
-				 CNT)
+			   "AUX" (POS ,COMPLEX-POS)
+				 (LOOK? ,COMPLEX-LOOKED?))
 	<COND (<==? .CONTEXT ,M-LOOK>
 	       <SETG COMPLEX-LOOKED? T>
 	       <TELL "You are in " THE ,IN-COMPLEX ". It is a long brightly lit hall running ">
